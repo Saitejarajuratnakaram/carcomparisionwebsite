@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CarInfo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS CSS (Animate On Scroll) -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Center the form on the page */
+        s {
+            /* font-family: Arial, sans-serif; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* Styling the search form */
+        #search-form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling the input field */
+        #search-input {
+            width: 300px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 50px;
+            outline: none;
+            font-size: 16px;
+            background-color: #f9f9f9;
+            transition: all 0.3s ease;
+        }
+
+        /* Hover and focus effect for the input */
+        #search-input:hover,
+        #search-input:focus {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Styling the search button */
+        button {
+            background-color: #01d28e;
+            color: #fff;
+            padding: 10px 20px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        /* Hover effect for the button */
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Styling the button on focus */
+        button:focus {
+            outline: none;
+        }
+
+
+
+        /* General Section Styling */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            margin: 20px auto;
+            /* max-width: 800px; */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        section p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Specific Section Styling */
+        #categories {
+            background-color: #e2e6ea;
+        }
+
+        #comparison {
+            background-color: #d4edda;
+        }
+
+        #support {
+            background-color: #cce5ff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            section {
+                padding: 40px 15px;
+            }
+
+            section h1 {
+                font-size: 24px;
+            }
+
+            section p {
+                font-size: 16px;
+            }
+        }
+    </style>
+
+    <style>
+        /* Flexbox container to align image and text */
+        .content-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        /* Style for the image */
+        .content-container img {
+            height: 90px;
+            width: 90px;
+            border-radius: 10px;
+        }
+
+        /* Style for the text content */
+        .content-container div {
+            max-width: 600px;
+        }
+
+        /* General button styling */
+        .btn-primary {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        /* Comparison Section Styling */
+        .comparison-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .comparison-text {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .comparison-image {
+            flex: 1;
+            text-align: right;
+        }
+
+        .comparison-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .comparison-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .comparison-text,
+            .comparison-image {
+                margin: 0;
+            }
+
+            .comparison-image {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .comparison-image img {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Car<span>info</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item "><a href="category.html" class="nav-link">Categories</a></li>
+                    <li class="nav-item"><a href="comparision.html" class="nav-link">Comparision</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">AboutUs</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li class="nav-item">
+                        <form class="form-inline my-2 my-lg-0" id="searchForm">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                                name="query" id="searchQuery">
+                            <button class="btn btn-outline-success my-2 my-sm-0"
+                                style="background-color: #01d28e; color: white;" type="submit">Search</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- END nav -->
+
+    <div class="hero-wrap ftco-degree-bg" style="background-image: url('banner1.avif');"
+        data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
+                <div class="col-lg-8 ftco-animate">
+                    <div class="text w-100 text-center mb-md-5 pb-md-5">
+                        <h1 class="mb-4">Fast &amp; Easy Way To Compare A Car</h1>
+                        <!-- <p style="font-size: 18px;">A small river named Duden flows by their place and supplies it with the
+              necessary regelialia. It is a paradisematic country, in which roasted parts</p> -->
+                        <a href="comparevideo.mp4"
+                            class="icon-wrap popup-vimeo d-flex align-items-center mt-4 justify-content-center">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-play"></span>
+                            </div>
+                            <div class="heading-title ml-5">
+                                <span>Easy steps for comparing a car</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- about -->
+
+
+    <section class="ftco-section ftco-about">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center"
+                    style="background-image: url(images/about.jpg);">
+                </div>
+                <div class="col-md-6 wrap-about ftco-animate">
+                    <div class="heading-section heading-section-white pl-md-5">
+                        <span class="subheading">About us</span>
+                        <h2 class="mb-4">Welcome to CarInfo</h2>
+
+                        <p>Welcome to CarInfo, your ultimate destination for comparing cars with ease and precision. We
+                            are
+                            passionate car enthusiasts who understand the importance of making informed decisions when
+                            it comes to
+                            purchasing or leasing a vehicle. With the ever-evolving automotive landscape, finding the
+                            right car that
+                            fits your budget, lifestyle, and preferences can be overwhelming.
+
+                            At CarInfo, our goal is to simplify the process by offering comprehensive, side-by-side
+                            comparisons of the
+                            latest car models. Whether you're looking for fuel efficiency, advanced technology, safety
+                            features, or
+                            performance, we provide detailed insights to help you choose the perfect vehicle. Our expert
+                            reviews,
+                            real-time pricing data, and user-friendly tools empower you to make confident decisions.
+
+                            Driven by transparency, accuracy, and a passion for cars, we aim to be your trusted partner
+                            in the
+                            car-buying journey. Explore, compare, and find the car that's right for you!
+
+                        </p>
+                        <p><a href="about.html" class="btn btn-primary py-3 px-4">Know More</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+
+
+
+
+    <section class="ftco-section ftco-no-pt bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+                    <span class="subheading">What we recommend</span>
+                    <h2 class="mb-2">Popular Vehicles</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="carousel-car owl-carousel">
+                        <div class="item">
+                            <div class="car-wrap rounded ftco-animate">
+                                <div class="img rounded d-flex align-items-end"
+                                    style="background-image: url(Audi\ A8.jpg);">
+                                </div>
+                                <div class="text">
+                                    <h2 class="mb-0"><a href="Audi A8.html">Audi A8</a></h2>
+
+                                    <p class="d-flex mb-0 d-block"><a href="comparision.html"
+                                            class="btn btn-primary py-2 mr-1">Compare</a> <a href="Audi A8.html"
+                                            class="btn btn-secondary py-2 ml-1">Details</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="car-wrap rounded ftco-animate">
+                                <div class="img rounded d-flex align-items-end"
+                                    style="background-image: url(baleno.jpg);">
+                                </div>
+                                <div class="text">
+                                    <h2 class="mb-0"><a href="baleno.html">Baleno</a></h2>
+
+                                    <p class="d-flex mb-0 d-block"><a href="comparision.html"
+                                            class="btn btn-primary py-2 mr-1">Compare</a> <a href="baleno.html"
+                                            class="btn btn-secondary py-2 ml-1">Details</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="car-wrap rounded ftco-animate">
+                                <div class="img rounded d-flex align-items-end"
+                                    style="background-image: url(bmw_3series_330i.webp);">
+                                </div>
+                                <div class="text">
+                                    <h2 class="mb-0"><a href="BMW 3 Series.html">BMW 3 series</a></h2>
+
+                                    <p class="d-flex mb-0 d-block"><a href="comparision.html"
+                                            class="btn btn-primary py-2 mr-1">Compare</a> <a href="BMW 3 Series.html"
+                                            class="btn btn-secondary py-2 ml-1">Details</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="car-wrap rounded ftco-animate">
+                                <div class="img rounded d-flex align-items-end"
+                                    style="background-image: url(Jaguar\ XE.jpg);">
+                                </div>
+                                <div class="text">
+                                    <h2 class="mb-0"><a href="Jaguar XE.html">Jaguar XE</a></h2>
+
+                                    <p class="d-flex mb-0 d-block"><a href="comparision.html"
+                                            class="btn btn-primary py-2 mr-1">Compare</a> <a href="Jaguar XE.html"
+                                            class="btn btn-secondary py-2 ml-1">Details</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-7 text-center heading-section ftco-animate">
+                    <span class="subheading">Services</span>
+                    <h2 class="mb-3">Our Latest Services</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="services services-2 w-100 text-center">
+                        
+                        <img src="sedan.png" style="height: 90px;" alt="">
+                        <br>
+                        <br>
+                        <div class="text w-100">
+                            <h3 class="heading mb-2">Sedan Comparison</h3>
+                            <p>Compare top sedans based on performance, price, and fuel efficiency to find the best one for your needs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="services services-2 w-100 text-center">
+                        <img src="suv (1).png" style="height: 90px;" alt="">
+                        <br>
+                        <br>
+                        <div class="text w-100">
+                            <h3 class="heading mb-2">SUV Comparison</h3>
+                            <p>Explore various SUVs and their key features such as safety, space, and off-road capabilities.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="services services-2 w-100 text-center">
+                        
+                        <img src="electric-car.png" style="height: 90px;" alt="">
+                        <br>
+                        <br>
+                       
+                        <div class="text w-100">
+                            <h3 class="heading mb-2">Electric Vehicle Comparison</h3>
+                            <p>Compare electric vehicles for range, charging times, and environmental impact to make an informed choice.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="services services-2 w-100 text-center">
+                        
+                        <img src="car.png" style="height: 90px;" alt="">
+                        <br>
+                        <br>
+                        <div class="text w-100">
+                            <h3 class="heading mb-2">Luxury Car Comparison</h3>
+                            <p>Discover the top luxury cars by comparing comfort, design, and premium features for the ultimate experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+
+
+
+
+
+ 
+    <!-- Vehicle Categories Section -->
+    <section id="categories">
+        <div class="content-container">
+            <!-- Left Image with AOS effect -->
+            <div data-aos="zoom-in-left" data-aos-delay="200">
+                <img src="category1.avif" style="height: 300px; width: 300px;" alt="Vehicle Categories">
+            </div>
+
+            <!-- Right Description with AOS effect -->
+            <div data-aos="zoom-in-right" style="margin-left: 90px;" data-aos-delay="400">
+                <h1>Vehicle Categories
+
+                </h1>
+                <p>Discover vehicles across different categories, from rugged SUVs to sleek sedans and versatile trucks.
+                    Browse through a wide range of options to find the perfect vehicle for your needs. Whether you're
+                    looking for performance or comfort, we've got you covered.
+
+                </p>
+                <p><a href="category.html" class="btn btn-primary">More Categories</a></p>
+            </div>
+        </div>
+    </section>
+    <!-- Comparison Tools Section -->
+    <section id="comparison">
+        <div class="comparison-container">
+            <!-- Description -->
+            <div class="comparison-text" data-aos="zoom-in-left" data-aos-delay="200">
+                <h1>Comparison Tools</h1>
+                <p>Easily compare various car models side-by-side with our user-friendly comparison tools. Analyze
+                    specifications, features, and prices to make informed decisions. Find the best match for your
+                    lifestyle and budget with just a few clicks.</p>
+                <p><a href="comparision.html" class="btn btn-primary">Compare Now</a></p>
+            </div>
+
+            <!-- Image -->
+            <div class="comparison-image" data-aos="zoom-in-right" data-aos-delay="400">
+                <img src="compare.avif" alt="Comparison Tools">
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Support Section -->
+    <section id="categories">
+        <div class="content-container">
+            <!-- Left Image with AOS effect -->
+            <div data-aos="zoom-in-left" data-aos-delay="200">
+                <img src="customer1.webp" style="height: 300px; width: 400px;" alt="Vehicle Categories">
+            </div>
+
+            <!-- Right Description with AOS effect -->
+            <div data-aos="zoom-in-right" style="margin-left: 90px;" data-aos-delay="400">
+                <h1>
+                    Customer Support
+                </h1>
+                <p>
+                    Our dedicated support team is ready to assist with all your inquiries and concerns. Whether it's
+                    finding the right car, navigating the site, or resolving issues, we're here to help. Reach out
+                    anytime for a smooth and hassle-free experience.
+
+
+
+
+
+
+
+                </p>
+                <p><a href="contact.html" class="btn btn-primary">Contact now</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer start -->
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2"><a href="#" class="logo">Car<span>info</span></a></h2>
+                        <p>CarInfo helps users make informed decisions by providing detailed information about each car
+                            model,
+                            including images, user reviews, and expert opinions.</p>
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                            <li class="ftco-animate">
+                                <a href="https://twitter.com/yourprofile" target="_blank">
+                                    <span class="icon-twitter"></span>
+                                </a>
+                            </li>
+                            <li class="ftco-animate">
+                                <a href="https://facebook.com/yourprofile" target="_blank">
+                                    <span class="icon-facebook"></span>
+                                </a>
+                            </li>
+                            <li class="ftco-animate">
+                                <a href="https://instagram.com/yourprofile" target="_blank">
+                                    <span class="icon-instagram"></span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4 ml-md-5">
+                        <h2 class="ftco-heading-2">Information</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="category.html" class="py-2 d-block">Categories</a></li>
+                            <li><a href="comparision.html" class="py-2 d-block">Comparision</a></li>
+                            <li><a href="about.html" class="py-2 d-block">AboutUs</a></li>
+                            <li><a href="contact.html" class="py-2 d-block">Contact</a></li>
+                            <li><a href="faq.html" class="py-2 d-block">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Trending Cars</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="defender.html" class="py-2 d-block">Defender</a></li>
+                            <li><a href="virtus.html" class="py-2 d-block">Virtus</a></li>
+                            <li><a href="gclass.html" class="py-2 d-block">G-Class</a></li>
+                            <li><a href="fortuner.html" class="py-2 d-block">Fortuner</a></li>
+                            <li><a href="baleno.html" class="py-2 d-block">Baleno</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Have a Questions?</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li><span class="icon icon-map-marker"></span><span class="text">JUBILEE HILLS,
+                                        HYDERABAD, TELANGANA,
+                                        INDIA</span></li>
+                                <li><a><span class="icon icon-phone"></span><span class="text">+91 9876543210</span></a>
+                                </li>
+                                <li><a><span class="icon icon-envelope"></span><span
+                                            class="text">info@carinfo.com</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+
+                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved |</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00" />
+        </svg></div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+
+
+    <!-- AOS JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        const files = [
+            { name: 'Acura ILX', url: 'Acura ILX.html' },
+            { name: 'Acura TLX', url: 'Acura TLX.html' },
+            { name: 'Virtus', url: 'virtus.html' },
+            { name: 'Alfa Romeo Giulia', url: 'Alfa Romeo Giulia.html' },
+            { name: 'Audi A4', url: 'Audi A4.html' },
+            { name: 'ashokleylandboss', url: 'ashokleylandboss.html' },
+            { name: 'dongfengkinland', url: 'dongfengkinland.html' },
+            { name: 'eicherpro3015', url: 'eicherpro3015.html' },
+            { name: 'fotonauman', url: 'fotonauman.html' },
+            { name: 'Isuzunseriessub', url: 'Isuzunseriessub.html' },
+            { name: 'mahindrablazo', url: 'mahindrablazo.html' },
+            { name: 'nissannv400', url: 'nissannv400.html' },
+            { name: 'opelmovano', url: 'opelmovano.html' },
+            { name: 'tataultra', url: 'tataultra.html' },
+            { name: 'volkswagencrafter', url: 'volkswagencrafter.html' },
+            { name: 'Acura ILX', url: 'Acura ILX.html' },
+            { name: 'Acura TLX', url: 'Acura TLX.html' },
+            { name: 'Alfa Romeo Giulia', url: 'Alfa Romeo Giulia.html' },
+            { name: 'Audi A4', url: 'Audi A4.html' },
+            { name: 'Audi A6', url: 'Audi A6.html' },
+            { name: 'Audi A8', url: 'Audi A8.html' },
+            { name: 'BMW 3 Series', url: 'BMW 3 Series.html' },
+            { name: 'BMW 5 Series', url: 'BMW 5 Series.html' },
+            { name: 'Buick Regal', url: 'Buick Regal.html' },
+            { name: 'Cadillac CT5', url: 'Cadillac CT5.html' },
+            { name: 'Chevrolet Impala', url: 'Chevrolet Impala.html' },
+            { name: 'Chevrolet Malibu', url: 'Chevrolet Malibu.html' },
+            { name: 'Chrysler 300', url: 'Chrysler 300.html' },
+            { name: 'Dodge Charger', url: 'Dodge Charger.html' },
+            { name: 'Ford Fusion', url: 'Ford Fusion.html' },
+            { name: 'Ford Taurus', url: 'Ford Taurus.html' },
+            { name: 'Genesis G70', url: 'Genesis G70.html' },
+            { name: 'Genesis G80', url: 'Genesis G80.html' },
+            { name: 'Honda Accord', url: 'Honda Accord.html' },
+            { name: 'Honda Civic', url: 'Honda Civic.html' },
+            { name: 'Honda Insight', url: 'Honda Insight.html' },
+            { name: 'Hyundai Elantra', url: 'Hyundai Elantra.html' },
+            { name: 'Hyundai Sonata', url: 'Hyundai Sonata.html' },
+            { name: 'Infiniti Q50', url: 'Infiniti Q50.html' },
+            { name: 'Jaguar XE', url: 'Jaguar XE.html' },
+            { name: 'Kia K5', url: 'Kia K5.html' },
+            { name: 'Kia Optima', url: 'Kia Optima.html' },
+            { name: 'Kia Stinger', url: 'Kia Stinger.html' },
+            { name: 'Lincoln MKZ', url: 'Lincoln MKZ.html' },
+            { name: 'Lexus ES', url: 'Lexus ES.html' },
+            { name: 'Lexus IS', url: 'Lexus IS.html' },
+            { name: 'Mazda 3', url: 'Mazda 3.html' },
+            { name: 'Mazda 6', url: 'Mazda 6.html' },
+            { name: 'Mercedes-Benz C-Class', url: 'Mercedes-Benz C-Class.html' },
+            { name: 'Mercedes-Benz E-Class', url: 'Mercedes-Benz E-Class.html' },
+            { name: 'Mercedes-Benz S-Class', url: 'Mercedes-Benz S-Class.html' },
+            { name: 'Mitsubishi Lancer', url: 'Mitsubishi Lancer.html' },
+            { name: 'Nissan Altima', url: 'Nissan Altima.html' },
+            { name: 'Nissan Maxima', url: 'Nissan Maxima.html' },
+            { name: 'Subaru Legacy', url: 'Subaru Legacy.html' },
+            { name: 'Subaru WRX', url: 'Subaru WRX.html' },
+            { name: 'Skoda Octavia', url: 'Skoda Octavia.html' },
+            { name: 'Tesla Model S', url: 'Tesla Model S.html' },
+            { name: 'Toyota Avalon', url: 'Toyota Avalon.html' },
+            { name: 'Toyota Corolla', url: 'Toyota Corolla.html' },
+            { name: 'Volkswagen Jetta', url: 'Volkswagen Jetta.html' },
+            { name: 'Volkswagen Passat', url: 'Volkswagen Passat.html' },
+            { name: 'Volvo S60', url: 'Volvo S60.html' },
+            { name: 'Volvo S90', url: 'Volvo S90.html' },
+            { name: 'FreightlinerCascadia', url: 'FreightlinerCascadia.html' },
+            { name: 'KenworthT680', url: 'KenworthT680.html' },
+            { name: 'VolvoVNL760', url: 'VolvoVNL760.html' },
+            { name: 'Peterbilt579', url: 'Peterbilt579.html' },
+            { name: 'MackAnthem', url: 'MackAnthem.html' },
+            { name: 'InternationalLTSeries', url: 'InternationalLTSeries.html' },
+            { name: 'WesternStar5700XE', url: 'WesternStar5700XE.html' },
+            { name: 'Hino338', url: 'Hino338.html' },
+            { name: 'IsuzuNQR', url: 'IsuzuNQR.html' },
+            { name: 'FordF-750', url: 'FordF-750.html' },
+            { name: 'Mercedes-BenzActros', url: 'Mercedes-BenzActros.html' },
+            { name: 'ScaniaR500', url: 'ScaniaR500.html' },
+            { name: 'MANTGX', url: 'MANTGX.html' },
+            { name: 'DAFXF', url: 'DAFXF.html' },
+            { name: 'IvecoStralis', url: 'IvecoStralis.html' },
+            { name: 'VolvoFH16', url: 'VolvoFH16.html' },
+            { name: 'RenaultTRange', url: 'RenaultTRange.html' },
+            { name: 'TataLPT3718', url: 'TataLPT3718.html' },
+            { name: 'AshokLeylandEcomet1214', url: 'AshokLeylandEcomet1214.html' },
+            { name: 'Hino500Series', url: 'Hino500Series.html' },
+            { name: 'IsuzuF-Series', url: 'IsuzuF-Series.html' },
+            { name: 'Mercedes-BenzArocs', url: 'Mercedes-BenzArocs.html' },
+            { name: 'UDQuon', url: 'UDQuon.html' },
+            { name: 'FusoSuperGreat', url: 'FusoSuperGreat.html' },
+            { name: 'SinotrukHowo', url: 'SinotrukHowo.html' },
+            { name: 'DongfengKX', url: 'DongfengKX.html' },
+            { name: 'FAWJ6P', url: 'FAWJ6P.html' },
+            { name: 'ShacmanX3000', url: 'ShacmanX3000.html' },
+            { name: 'HyundaiXcient', url: 'HyundaiXcient.html' },
+            { name: 'DAFCF', url: 'DAFCF.html' },
+            { name: 'FordTransit', url: 'FordTransit.html' },
+            { name: 'RamProMaster', url: 'RamProMaster.html' },
+            { name: 'ChevroletExpress', url: 'ChevroletExpress.html' },
+            { name: 'GMCSavana', url: 'GMCSavana.html' },
+            { name: 'FiatDucato', url: 'FiatDucato.html' },
+            { name: 'Mercedes-BenzSprinter', url: 'Mercedes-BenzSprinter.html' },
+            { name: 'IvecoDaily', url: 'IvecoDaily.html' },
+            { name: 'RenaultMaster', url: 'RenaultMaster.html' },
+            { name: 'PeugeotBoxer', url: 'PeugeotBoxer.html' },
+            { name: 'CitroenJumper', url: 'CitroenJumper.html' },
+            { name: 'AudiQ5', url: ' Audi-Q5.html' },
+            { name: 'AudiSQ5', url: 'Audi-SQ5.html' },
+            { name: 'BMW X3 M', url: '  BMW-X3-M.html' },
+            { name: 'MBWX5', url: 'BMW-X5.html' },
+            { name: 'Chevrolet Equinox', url: 'Chevrolet-Equinox.html' },
+            { name: 'Chevrolet Tahoe', url: 'Chevrolet-Tahoe.html' },
+            { name: 'Chevrolet Traverse', url: 'Chevrolet-Traverse.html' },
+            { name: 'Crosstrek-Hybrid', url: 'Crosstrek-Hybrid.html' },
+            { name: 'Honda CRV Hybrid', url: 'CRV-hybrid.html' },
+            { name: 'Land Rover Defender', url: 'defender.html' },
+            { name: 'Dodge Durango SRT', url: ' Dodge-Durango-SRT.html' },
+            { name: 'Escape-Hybrid', url: 'Escape-Hybrid.html' },
+            { name: 'Eco-Sport', url: 'Ford-EcoSport.html' },
+            { name: 'Ford-Escape', url: 'ford-escape.html' },
+            { name: 'Ford-Expedition', url: 'Ford-Expedition.html' },
+            { name: 'Ford-Explorer', url: 'ford-explorer.html' },
+            { name: 'Ford-Mustang', url: 'Ford-Mustang-Mach-E.html' },
+            { name: 'Toyata-Fortuner', url: 'fortuner.html' },
+            { name: 'Mercedes-Benz-G-class', url: 'gclass.html' },
+            { name: 'GMC Yukon', url: 'GMC-Yukon.html' },
+            { name: 'Honda HR-V', url: 'Honda-HR-V.html' }
+
+        ];
+
+        document.getElementById('searchForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            const query = document.getElementById('searchQuery').value.toLowerCase();
+            const result = files.find(file => file.name.toLowerCase() === query);
+
+            if (result) {
+                window.location.href = result.url; // Redirect to the found URL
+            } else {
+                alert('No results found.'); // Optionally alert if no result found
+            }
+        });
+    </script>
+
+</body>
+
+</html>
