@@ -1,0 +1,1646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CarInfo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* General Section Styling */
+       
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            margin: 20px auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: bold;
+            /* text-transform: uppercase; */
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .container1 {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .filters button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #01d28e;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .filters button:hover {
+            background-color: #028f67;
+        }
+
+        .sorting {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sorting select {
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .vehicle-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: calc(28.33% - 20px);
+            /* Adjusted for three cards per row */
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .vehicle-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .vehicle-card h2 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .vehicle-card p {
+            color: #555;
+        }
+
+        .vehicle-card:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .vehicle-card {
+                width: calc(50% - 20px);
+                /* Two cards per row on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .vehicle-card {
+                width: 100%;
+                /* One card per row on mobile */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Car<span>info</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item "><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item active"><a href="category.html" class="nav-link">Categories</a></li>
+                    <li class="nav-item"><a href="comparision.html" class="nav-link">Comparision</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">AboutUs</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <!-- <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li> -->
+                </ul>
+            </div>
+        </div>
+
+
+    </nav>
+    <!-- END nav -->
+
+    <!-- top header start -->
+
+  <div class="hero-wrap ftco-degree-bg" style="background-image: url('list1.webp');"
+    data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
+        <div class="col-lg-8 ftco-animate">
+          <div class="text w-100 text-center mb-md-5 pb-md-5">
+            <h1 class="mb-4">Fast &amp; Easy Way To Compare A Car</h1>
+            <span style="display: flex; margin-left: 220px;"><a href="index.html">
+            <h1>Home /</h1></a><a href="category.html"><h1 style="color: #01d28e;">/ Categories</h1></a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- top header end -->
+
+
+    <div class="container1" style="margin-top: 90px;">
+        <h1>Vehicle Categories</h1>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search vehicles..." oninput="filterVehicles()">
+        </div>
+
+        <!-- Filters for Subcategories -->
+        <div class="filters">
+            <button onclick="filterByCategory('all')">All</button>
+            <button onclick="filterByCategory('sedan')">Sedans</button>
+            <button onclick="filterByCategory('suv')">SUVs</button>
+            <button onclick="filterByCategory('truck')">Trucks</button>
+        </div>
+
+
+        <!-- Sorting Options -->
+        <div class="sorting">
+            <select id="sortOptions" onchange="sortVehicles()">
+                <option value="popularity">Sort by Popularity</option>
+                <option value="price">Sort by Price</option>
+                <option value="newest">Sort by Newest</option>
+            </select>
+        </div>
+
+        <!-- Vehicle Grid -->
+        <div id="vehicleGrid" class="grid">
+            <!-- Sample Vehicle Cards -->
+            <!-- Sedan -->
+            <div class="vehicle-card" data-category="sedan" data-price="28,00,000" data-popularity="8"
+                data-date="2023-08-15">
+                <img src="Acura ILX.jpg" alt="Sedan 1">
+                <h2>Acura ILX</h2>
+                <p>Price: ₹28,00,000</p>
+                <p><a href="Acura ILX.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="45,00,000" data-popularity="9"
+                data-date="2023-07-20">
+                <img src="Acura TLX.jpg" alt="Sedan 2">
+                <h2>Acura TLX</h2>
+                <p>Price: ₹45,00,000</p>
+                <p><a href="Acura TLX.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="80,00,000" data-popularity="7"
+                data-date="2023-06-10">
+                <img src="Alfa Romeo Giulia.jpg" alt="Sedan 3">
+                <h2>Alfa Giulia</h2>
+                <p>Price: ₹80,00,000</p>
+                <p><a href="Alfa Romeo Giulia.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="₹45,00,000" data-popularity="6"
+                data-date="2023-05-05">
+                <img src="Audi A4.jpg" alt="Sedan 4">
+                <h2>Audi A4</h2>
+                <p>Price: ₹45,00,000</p>
+                <p><a href="Audi A4.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="80,00,000" data-popularity="8"
+                data-date="2023-04-12">
+                <img src="Audi A6.jpg" alt="Sedan 5">
+                <h2>Audi A6</h2>
+                <p>Price: ₹80,00,000</p>
+                <p><a href="Audi A6.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="1,58,00,000" data-popularity="9"
+                data-date="2023-03-22">
+                <img src="Audi A8.jpg" alt="Sedan 6">
+                <h2>Audi A8</h2>
+                <p>Price: ₹1,58,00,000</p>
+                <p><a href="Audi A8.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="₹20,00,000" data-popularity="7"
+                data-date="2023-02-10">
+                <img src="Baleno.jpg" alt="Sedan 7">
+                <h2>Baleno</h2>
+                <p>Price: ₹20,00,000</p>
+                <p><a href="Baleno.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="50,00,000" data-popularity="6"
+                data-date="2023-01-18">
+                <img src="BMW 3 Series.jpg" alt="Sedan 8">
+                <h2>BMW 3 Series</h2>
+                <p>Price: ₹50,00,000</p>
+                <p><a href="BMW 3 Series.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="70,00,000" data-popularity="9"
+                data-date="2022-12-15">
+                <img src="BMW 5 Series.jpg" alt="Sedan 9">
+                <h2>BMW 5 Series</h2>
+                <p>Price: ₹70,00,000</p>
+                <p><a href="BMW 5 Series.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="35,00,000" data-popularity="5"
+                data-date="2022-11-30">
+                <img src="Buick Regal.jpg" alt="Sedan 10">
+                <h2>Buick Regal</h2>
+                <p>Price: ₹35,00,000</p>
+                <p><a href="Buick Regal.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="45,00,000" data-popularity="8"
+                data-date="2022-10-10">
+                <img src="Cadillac CT5.jpg" alt="Sedan 11">
+                <h2>Cadillac CT5</h2>
+                <p>Price: ₹45,00,000</p>
+                <p><a href="Cadillac CT5.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="₹30,00,000" data-popularity="6"
+                data-date="2022-09-05">
+                <img src="Chevrolet Impala.jpg" alt="Sedan 12">
+                <h2>Impala</h2>
+                <p>Price: ₹30,00,000</p>
+                <p><a href="Chevrolet Impala.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="₹25,00,000" data-popularity="7"
+                data-date="2022-08-18">
+                <img src="Chevrolet Malibu.jpg" alt="Sedan 13">
+                <h2>Malibu</h2>
+                <p>Price: ₹25,00,000</p>
+                <p><a href="Chevrolet Malibu.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="₹45,00,000" data-popularity="9"
+                data-date="2022-07-25">
+                <img src="Chrysler 300.jpg" alt="Sedan 14">
+                <h2>Chrysler 300</h2>
+                <p>Price: ₹45,00,000</p>
+                <p><a href="Chrysler 300.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="45,00,000" data-popularity="8"
+                data-date="2022-06-30">
+                <img src="Dodge Chargeri.jpg" alt="Sedan 15">
+                <h2>Dodge Charger</h2>
+                <p>Price: ₹45,00,000</p>
+                <p><a href="Dodge Charger.html" class="btn btn-primary py-3 px-4">View More</a></p>
+
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="25,00,000" data-popularity="7"
+                data-date="2022-05-12">
+                <img src="Ford Fusion.jpg" alt="Sedan 16">
+                <h2>Ford Fusion</h2>
+                <p>Price: ₹25,00,000</p>
+                <p><a href="Ford Fusion.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="35,00,000" data-popularity="6"
+                data-date="2022-04-15">
+                <img src="Ford Taurus.jpg" alt="Sedan 17">
+                <h2>Ford Taurus</h2>
+                <p>Price: ₹35,00,000</p>
+                <p><a href="Ford Taurus.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="40,00,000" data-popularity="9"
+                data-date="2022-03-10">
+                <img src="Genesis G70.jpg" alt="Sedan 18">
+                <h2>Genesis G70</h2>
+                <p>Price: ₹40,00,000</p>
+                <p><a href="Genesis G70.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="65,00,000" data-popularity="8"
+                data-date="2022-02-22">
+                <img src="Genesis G80.jpg" alt="Sedan 19">
+                <h2>Genesis G80</h2>
+                <p>Price: ₹65,00,000</p>
+                <p><a href="Genesis G80.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="₹20,00,000" data-popularity="7"
+                data-date="2022-01-18">
+                <img src="HondaAc.jpg" alt="Sedan 20">
+                <h2>Honda Accord</h2>
+                <p>Price: ₹20,00,000</p>
+                <p><a href="Honda Accord.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="22000" data-popularity="5"
+                data-date="2021-12-12">
+                <img src="Honda Civic.jpg" alt="Sedan 21">
+                <h2>Honda Civic</h2>
+                <p>Price: ₹22,000</p>
+                <p><a href="Honda Civic.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="22,00,000" data-popularity="8"
+                data-date="2021-11-30">
+                <img src="Honda Insight.jpg" alt="Sedan 22">
+                <h2>Honda Insight</h2>
+                <p>Price: ₹22,00,000</p>
+                <p><a href="Honda Insight.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="20,00,000" data-popularity="6"
+                data-date="2021-10-25">
+                <img src="Hyundai Elantra.jpg" alt="Sedan 23">
+                <h2>Elantra</h2>
+                <p>Price: ₹20,00,000</p>
+                <p><a href="Hyundai Elantra.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="45,00,000" data-popularity="9"
+                data-date="2021-09-15">
+                <img src="Volvo S60.jpg" alt="Sedan 24">
+                <h2>Infiniti Q50</h2>
+                <p>Price: ₹45,00,000</p>
+                <p><a href="Infiniti Q50.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="50,00,000" data-popularity="8"
+                data-date="2021-08-01">
+                <img src="Jaguar XE.jpg" alt="Sedan 25">
+                <h2>Jaguar XE</h2>
+                <p>Price: ₹50,00,000</p>
+                <p><a href="Jaguar XE.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="₹27,00,000" data-popularity="6"
+                data-date="2021-07-20">
+                <img src="Kia K5.jpg" alt="Sedan 26">
+                <h2>Kia K5</h2>
+                <p>Price: ₹27,00,000</p>
+                <p><a href="Kia K5.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="28,00,000" data-popularity="7"
+                data-date="2021-06-10">
+                <img src="Kia Optima.jpg" alt="Sedan 27">
+                <h2>Kia Optima</h2>
+                <p>Price: ₹28,00,000</p>
+                <p><a href="Kia Optima.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="35,00,000" data-popularity="8"
+                data-date="2021-05-05">
+                <img src="Kia Stinger.jpg" alt="Sedan 28">
+                <h2>Kia Stinger</h2>
+                <p>Price: ₹35,00,000</p>
+                <p><a href="Kia Stinger.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="60,00,000" data-popularity="9"
+                data-date="2021-04-01">
+                <img src="Lexus ES.jpg" alt="Sedan 29">
+                <h2>Lexus ES</h2>
+                <p>Price: ₹60,00,000</p>
+                <p><a href="Lexus ES.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="50,00,000" data-popularity="8"
+                data-date="2021-03-15">
+                <img src="Lexus IS.jpg" alt="Sedan 30">
+                <h2>Lexus IS</h2>
+                <p>Price: ₹50,00,000</p>
+                <p><a href="Lexus IS.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="50,00,000" data-popularity="6"
+                data-date="2021-02-10">
+                <img src="Lincoln MKZ.jpg" alt="Sedan 31">
+                <h2>Lincoln MKZ</h2>
+                <p>Price: ₹50,00,000</p>
+                <p><a href="Lincoln MKZ.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="22,00,000" data-popularity="7"
+                data-date="2021-01-05">
+                <img src="Mazda 3.jpg" alt="Sedan 32">
+                <h2>Mazda 3</h2>
+                <p>Price: ₹22,00,000</p>
+                <p><a href="Mazda 3.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="₹25,00,000" data-popularity="9"
+                data-date="2020-12-15">
+                <img src="Mazda 6.jpg" alt="Sedan 33">
+                <h2>Mazda 6</h2>
+                <p>Price: ₹25,00,000</p>
+                <p><a href="Mazda 6.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="55,00,000" data-popularity="8"
+                data-date="2020-11-20">
+                <img src="Mercedes-Benz C-Class.jpg" alt="Sedan 34">
+                <h2>Mercedes-Benz C-Class</h2>
+                <p>Price: ₹55,00,000</p>
+                <p><a href="Mercedes-Benz C-Class.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="75,00,000" data-popularity="7"
+                data-date="2020-10-30">
+                <img src="Mercedes-Benz E-Class.webp" alt="Sedan 35">
+                <h2>Mercedes-Benz E-Class</h2>
+                <p>Price: ₹75,00,000</p>
+                <p><a href="Mercedes-Benz E-Class.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="1,50,00,000" data-popularity="6"
+                data-date="2020-09-25">
+                <img src="Mercedes-Benz S-Class.jpg" alt="Sedan 36">
+                <h2>Mercedes-Benz S-Class</h2>
+                <p>Price: ₹1,50,00,000</p>
+                <p><a href="Mercedes-Benz S-Class.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="35,00,000" data-popularity="8"
+                data-date="2020-08-15">
+                <img src="Mitsubishi Lancer.jpg" alt="Sedan 37">
+                <h2>Lancer</h2>
+                <p>Price: ₹35,00,000</p>
+                <p><a href="Mitsubishi Lancer.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="25,00,000" data-popularity="9"
+                data-date="2020-07-10">
+                <img src="NissanAltima.webp" alt="Sedan 38">
+                <h2>Nissan Altima</h2>
+                <p>Price: ₹25,00,000</p>
+                <p><a href="Nissan Altima.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="45,00,000" data-popularity="6"
+                data-date="2020-06-05">
+                <img src="Nissan Maxima.jpg" alt="Sedan 39">
+                <h2>Nissan Maxima</h2>
+                <p>Price: ₹45,00,000</p>
+                <p><a href="Nissan Maxima.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="25,00,000" data-popularity="5"
+                data-date="2020-05-20">
+                <img src="Skoda Octavia.jpg" alt="Sedan 40">
+                <h2>Skoda Octavia</h2>
+                <p>Price: ₹25,00,000</p>
+                <p><a href="Skoda Octavia.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="30,00,000" data-popularity="8"
+                data-date="2020-04-10">
+                <img src="Subaru Legacy.jpg" alt="Sedan 41">
+                <h2>Subaru Legacy</h2>
+                <p>Price: ₹30,00,000</p>
+                <p><a href="Subaru Legacy.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="45,00,000" data-popularity="7"
+                data-date="2020-03-01">
+                <img src="Subaru WRX.jpg" alt="Sedan 42">
+                <h2>Subaru WRX</h2>
+                <p>Price: ₹45,00,000</p>
+                <p><a href="Subaru WRX.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="1,00,00,000" data-popularity="6"
+                data-date="2020-01-20">
+                <img src="Tesla Model S.jpg" alt="Sedan 43">
+                <h2>Tesla Model S</h2>
+                <p>Price: ₹1,00,00,000</p>
+                <p><a href="Tesla Model S.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="35,00,000" data-popularity="9"
+                data-date="2019-12-12">
+                <img src="Toyota Avalon.jpg" alt="Sedan 44">
+                <h2>Toyota Avalon</h2>
+                <p>Price: ₹35,00,000</p>
+                <p><a href="Toyota Avalon.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="₹18,00,000" data-popularity="8"
+                data-date="2019-11-01">
+                <img src="Toyota Corolla.jpg" alt="Sedan 45">
+                <h2>Toyota Corolla</h2>
+                <p>Price: ₹18,00,000</p>
+                <p><a href="Toyota Corolla.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="18,00,000" data-popularity="8"
+                data-date="2019-11-01">
+                <img src="Virtus.jpg" alt="Sedan 45">
+                <h2>Virtus</h2>
+                <p>Price: ₹18,00,000</p>
+                <p><a href="Virtus.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="22,00,000" data-popularity="8"
+                data-date="2019-11-01">
+                <img src="Volkswagen Jetta.jpg" alt="Sedan 45">
+                <h2>Jetta</h2>
+                <p>Price: ₹22,00,000</p>
+                <p><a href="Volkswagen Jetta" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="35,00,000" data-popularity="8"
+                data-date="2019-11-01">
+                <img src="Volkswagen Passat.jpg" alt="Sedan 45">
+                <h2>Passat</h2>
+                <p>Price: ₹35,00,000</p>
+                <p><a href="Volkswagen Passat.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="45,00,000" data-popularity="8"
+                data-date="2019-11-01">
+                <img src="Volvo S60.jpg" alt="Sedan 45">
+                <h2>Volvo S60</h2>
+                <p>Price: ₹45,00,000</p>
+                <p><a href="Volvo S60.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="sedan" data-price="60,00,000" data-popularity="8"
+                data-date="2019-11-01">
+                <img src="Volvo S90.jpg" alt="Sedan 45">
+                <h2>Volvo S90</h2>
+                <p>Price: ₹60,00,000</p>
+                <p><a href="Volvo S90.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- SUVs -->
+                        <!-- SUVs -->
+                        <div class="vehicle-card" data-category="suv" data-price="7000000" data-popularity="8"
+                        data-date="2023-06-10">
+                        <img src="audiq5.jpg" alt="SUV 1">
+                        <h2>Audi Q5</h2>
+                        <p>Price: &#8377;7000000</p>
+                        <p><a href="Audi-Q5.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="8500000" data-popularity="7"
+                        data-date="2023-05-25">
+                        <img src="sq5.jpg" alt="SUV 2">
+                        <h2>Audi SQ5</h2>
+                        <p>Price: ₹85,00,000</p>
+                        <p><a href="Audi-SQ5.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="12000000" data-popularity="7"
+                        data-date="2023-05-25">
+                        <img src="Bmwx3m.jpg" alt="SUV 2">
+                        <h2>BMW X3 M</h2>
+                        <p>Price: ₹1,20,00,000</p>
+                        <p><a href="BMW-X3-M.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="10500000" data-popularity="6"
+                        data-date="2023-03-10">
+                        <img src="bmwx5.jpg" alt="SUV 4">
+                        <h2>BMW X5</h2>
+                        <p>Price: ₹1,05,00,000</p>
+                        <p><a href="BMW-X5.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="2500000" data-popularity="10"
+                        data-date="2023-02-05">
+                        <img src="equinox.jpg" alt="SUV 5">
+                        <h2>Chevrolet Equinox</h2>
+                        <p>Price: ₹25,00,000</p>
+                        <p><a href="Chevrolet-Equinox.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="9500000" data-popularity="9"
+                        data-date="2023-01-20">
+                        <img src="chevrolettahoe.jpg" alt="SUV 6">
+                        <h2>Chevrolet Tahoe</h2>
+                        <p>Price: ₹95,00,000</p>
+                        <p><a href="Chevrolet-Tahoe.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="3500000" data-popularity="8"
+                        data-date="2022-12-15">
+                        <img src="traverse.jpg" alt="SUV 7">
+                        <h2>Chevrolet Traverse</h2>
+                        <p>Price: ₹35,00,000</p>
+                        <p><a href="chevrolet-traverse.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="3500000" data-popularity="7"
+                        data-date="2022-11-10">
+                        <img src="crosstekhybrid.jpg" alt="SUV 8">
+                        <h2>Subaru Crosstek</h2>
+                        <p>Price: ₹35,00,000</p>
+                        <p><a href="Crosstrek-Hybrid.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="3200000" data-popularity="6"
+                        data-date="2022-10-05">
+                        <img src="hondacrvhybrid.jpg" alt="SUV 9">
+                        <h2>Honda CR-V Hybrid</h2>
+                        <p>Price: ₹32,00,000</p>
+                        <p><a href="CRV-hybrid.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="10000000" data-popularity="5"
+                        data-date="2022-09-01">
+                        <img src="defender.jpg" alt="SUV 10">
+                        <h2>Land Rover Defender</h2>
+                        <p>Price: ₹1,00,00,000</p>
+                        <p><a href="defender.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="11000000" data-popularity="8"
+                        data-date="2022-08-18">
+                        <img src="durangosrt.jpg" alt="SUV 11">
+                        <h2>Dodge Durango SRT</h2>
+                        <p>Price: ₹1,10,00,000</p>
+                        <p><a href="Dodge-Durango-SRT.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="3000000" data-popularity="9"
+                        data-date="2022-07-25">
+                        <img src="escapehybrid.jpg" alt="SUV 12">
+                        <h2>Ford Escape Hybrid</h2>
+                        <p>Price: ₹30,00,000</p>
+                        <p><a href="Escape-Hybrid.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="1250000" data-popularity="7"
+                        data-date="2022-06-15">
+                        <img src="fordecosport.jpg" alt="SUV 13">
+                        <h2>Ford EcoSport Hybrid</h2>
+                        <p>Price: ₹12,50,000</p>
+                        <p><a href="Ford-EcoSport.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="2950000" data-popularity="6"
+                        data-date="2022-05-10">
+                        <img src="fordescape.jpg" alt="SUV 14">
+                        <h2>Ford Escape</h2>
+                        <p>Price: ₹29,50,000</p>
+                        <p><a href="ford-escape.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="10500000" data-popularity="10"
+                        data-date="2022-04-01">
+                        <img src="fordexpendition.jpg" alt="SUV 15">
+                        <h2>Ford Expedition</h2>
+                        <p>Price: ₹1,05,00,000</p>
+                        <p><a href="Ford-Expedition.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="3800000" data-popularity="9"
+                        data-date="2022-03-20">
+                        <img src="fordexplorer.jpg" alt="SUV 16">
+                        <h2>Ford Explorer</h2>
+                        <p>Price: ₹38,00,000</p>
+                        <p><a href="ford-explorer.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="7000000" data-popularity="8"
+                        data-date="2022-02-10">
+                        <img src="mach-e.jpg" alt="SUV 17">
+                        <h2>Ford Mustang Mach-E</h2>
+                        <p>Price: ₹70,00,000</p>
+                        <p><a href="Ford-Mustang-Mach-E.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="3500000" data-popularity="7"
+                        data-date="2022-01-15">
+                        <img src="fortuner.jpg" alt="SUV 18">
+                        <h2>Toyota Fortuner</h2>
+                        <p>Price: ₹35,00,000</p>
+                        <p><a href="fortuner.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="20000000" data-popularity="6"
+                        data-date="2021-12-12">
+                        <img src="g-class.jpg" alt="SUV 19">
+                        <h2>Mercedes-Benz G-Class</h2>
+                        <p>Price: ₹2,00,00,000</p>
+                        <p><a href="gclass.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="11000000" data-popularity="5"
+                        data-date="2021-11-30">
+                        <img src="gmcyukon.jpg" alt="SUV 20">
+                        <h2>GMC Yukon</h2>
+                        <p>Price: ₹1,10,00,000</p>
+                        <p><a href="GMC-Yukon.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="1650000" data-popularity="8"
+                        data-date="2021-10-15">
+                        <img src="hondahrv.jpg" alt="SUV 21">
+                        <h2>Honda HR-V</h2>
+                        <p>Price: ₹16,50,000</p>
+                        <p><a href="Honda-HR-V.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="3600000" data-popularity="9"
+                        data-date="2021-09-10">
+                        <img src="hondapilot.jpg" alt="SUV 22">
+                        <h2>Honda Pilot</h2>
+                        <p>Price: ₹36,00,000</p>
+                        <p><a href="honda-pilot.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="3000000" data-popularity="6"
+                        data-date="2021-08-01">
+                        <img src="hondacrv.jpg" alt="SUV 23">
+                        <h2>Honda CR-V</h2>
+                        <p>Price: ₹30,00,000</p>
+                        <p><a href="hondacr-v.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="6000000" data-popularity="7"
+                        data-date="2021-07-20">
+                        <img src="ioniq-5.jpg" alt="SUV 24">
+                        <h2>Hyundai Ioniq 5</h2>
+                        <p>Price: ₹60,00,000</p>
+                        <p><a href="Hyundai-Ioniq-5.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="2500000" data-popularity="8"
+                        data-date="2021-06-15">
+                        <img src="hyundaikona.jpg" alt="SUV 25">
+                        <h2>Hyundai Kona</h2>
+                        <p>Price: ₹25,00,000</p>
+                        <p><a href="Hyundai-Kona.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="3000000" data-popularity="9"
+                        data-date="2021-05-05">
+                        <img src="tucson.jpg" alt="SUV 26">
+                        <h2>Tucson</h2>
+                        <p>Price: ₹30,00,000</p>
+                        <p><a href="Hyundai-Tucson.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="6000000" data-popularity="8"
+                        data-date="2021-04-10">
+                        <img src="wrangler.jpg" alt="SUV 27">
+                        <h2>Jeep Wrangler</h2>
+                        <p>Price: ₹60,00,000</p>
+                        <p><a href="Jeep-Wrangler.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="2700000" data-popularity="7"
+                        data-date="2021-03-01">
+                        <img src="kianiro.jpg" alt="SUV 28">
+                        <h2>Kia Niro</h2>
+                        <p>Price: ₹27,00,000</p>
+                        <p><a href="Kia-Niro.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="2800000" data-popularity="6"
+                        data-date="2021-02-20">
+                        <img src="kiasportage.jpg" alt="SUV 29">
+                        <h2>Kia Sportage</h2>
+                        <p>Price: ₹28,00,000</p>
+                        <p><a href="kia-sportage.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="4000000" data-popularity="5"
+                        data-date="2021-01-10">
+                        <img src="kiatelluride.jpg" alt="SUV 30">
+                        <h2>Kia Telluride</h2>
+                        <p>Price: ₹40,00,000</p>
+                        <p><a href="kia-telluride.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="10000000" data-popularity="9"
+                        data-date="2020-12-15">
+                        <img src="lexusrx.jpg" alt="SUV 31">
+                        <h2>Lexus RX</h2>
+                        <p>Price: ₹1,00,00,000</p>
+                        <p><a href="Lexus-RX.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="3000000" data-popularity="8"
+                        data-date="2020-11-30">
+                        <img src="mazdacx30.jpg" alt="SUV 32">
+                        <h2>Mazda CX-30</h2>
+                        <p>Price: ₹30,00,000</p>
+                        <p><a href="Mazda-CX-30.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="3100000" data-popularity="7"
+                        data-date="2020-10-10">
+                        <img src="mazdacx5.jpg" alt="SUV 33">
+                        <h2>Mazda CX-5</h2>
+                        <p>Price: ₹31,00,000</p>
+                        <p><a href="mazdaCX-5.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="8500000" data-popularity="6"
+                        data-date="2020-09-05">
+                        <img src="amg-glc.jpg" alt="SUV 34">
+                        <h2>AMG GLC</h2>
+                        <p>Price: ₹85,00,000</p>
+                        <p><a href="Mercedes-AMG-GLC.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="11000000" data-popularity="5"
+                        data-date="2020-08-01">
+                        <img src="mercedesbenzgle.jpg" alt="SUV 35">
+                        <h2>Benz GLE</h2>
+                        <p>Price: ₹1,10,00,000</p>
+                        <p><a href="Mercedes-Benz-GLE.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="10500000" data-popularity="4"
+                        data-date="2020-07-20">
+                        <img src="nissannarmada.jpg" alt="SUV 36">
+                        <h2>Nissan Armada</h2>
+                        <p>Price: ₹1,05,00,000</p>
+                        <p><a href="Nissan-Armada.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="1350000" data-popularity="3"
+                        data-date="2020-06-15">
+                        <img src="nissankicks.jpg" alt="SUV 37">
+                        <h2>Nissan Kicks</h2>
+                        <p>Price: ₹13,50,000</p>
+                        <p><a href="Nissan-Kicks.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="2850000" data-popularity="2"
+                        data-date="2020-05-10">
+                        <img src="nissanrogue.jpg" alt="SUV 38">
+                        <h2>Nissan Rogue</h2>
+                        <p>Price: ₹28,50,000</p>
+                        <p><a href="Nissan-Rogue.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="12000000" data-popularity="1"
+                        data-date="2020-04-01">
+                        <img src="PorscheCayenne.jpg" alt="SUV 39">
+                        <h2>Cayenne</h2>
+                        <p>Price: ₹1,20,00,000</p>
+                        <p><a href="Porsche-Cayenne.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="8500000" data-popularity="2"
+                        data-date="2020-03-15">
+                        <img src="porchemacan.jpg" alt="SUV 40">
+                        <h2>Porsche Macan</h2>
+                        <p>Price: ₹85,00,000</p>
+                        <p><a href="porsche-macan.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="3600000" data-popularity="3"
+                        data-date="2020-02-10">
+                        <img src="rav4hybrid.jpg" alt="SUV 41">
+                        <h2>Toyota RAV4</h2>
+                        <p>Price: ₹36,00,000</p>
+                        <p><a href="RAV4-Hybrid.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="11000000" data-popularity="4"
+                        data-date="2020-01-05">
+                        <img src="rivianr1s.jpg" alt="SUV 42">
+                        <h2>Rivian R1S</h2>
+                        <p>Price: ₹1,10,00,000</p>
+                        <p><a href="Rivian-R1S.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="2800000" data-popularity="5"
+                        data-date="2019-12-01">
+                        <img src="subharucrosstek.jpg" alt="SUV 43">
+                        <h2>Crosstrek</h2>
+                        <p>Price: ₹28,00,000</p>
+                        <p><a href="Subaru-Crosstrek.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="3400000" data-popularity="6"
+                        data-date="2019-11-15">
+                        <img src="forester.jpg" alt="SUV 44">
+                        <h2>Subaru Forester</h2>
+                        <p>Price: ₹34,00,000</p>
+                        <p><a href="Subaru-Forester.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="7000000" data-popularity="6"
+                        data-date="2019-11-15">
+                        <img src="teslamodely.jpg" alt="SUV 45">
+                        <h2>Tesla Model Y(EV)</h2>
+                        <p>Price: ₹70,00,000</p>
+                        <p><a href="TeslaModel-Y.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="5500000" data-popularity="6"
+                        data-date="2019-11-15">
+                        <img src="4runner.jpg" alt="SUV 46">
+                        <h2>Toyota 4Runner</h2>
+                        <p>Price: ₹55,00,000</p>
+                        <p><a href="Toyota-4Runner.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="3700000" data-popularity="6"
+                        data-date="2019-11-15">
+                        <img src="toyotahighlander.jpg" alt="SUV 44">
+                        <h2>Highlander</h2>
+                        <p>Price: ₹37,00,000</p>
+                        <p><a href="toyota-highlander.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="3200000" data-popularity="6"
+                        data-date="2019-11-15">
+                        <img src="toyotarav4.jpg" alt="SUV 47">
+                        <h2>Toyota RAV4</h2>
+                        <p>Price: ₹32,00,000</p>
+                        <p><a href="toyota-highlander.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="11000000" data-popularity="6"
+                        data-date="2019-11-15">
+                        <img src="toyotasequoia.jpg" alt="SUV 48">
+                        <h2>Toyota Sequoia</h2>
+                        <p>Price: ₹1,10,00,000</p>
+                        <p><a href="Toyota-Sequoia.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+                    <div class="vehicle-card" data-category="suv" data-price="6500000" data-popularity="6"
+                        data-date="2019-11-15">
+                        <img src="volkswagenid4.jpg" alt="SUV 49">
+                        <h2>ID.4</h2>
+                        <p>Price: ₹65,00,000</p>
+                        <p><a href="Volkswagen-ID-4.html" class="btn btn-primary py-3 px-4">View More</a></p>
+                    </div>
+        
+        
+            
+
+
+            <!-- Trucks -->
+            <!-- Trucks -->
+
+            <!-- carrier 1 -->
+            <div class="vehicle-card" data-category="truck" data-price="21,00,000" data-popularity="9"
+                data-date="2023-07-15">
+                <img src="FreightlinerCascadia.jpg" alt="Truck">
+                <h2>Freightliner</h2>
+                <p>Price: ₹21,00,000</p>
+                <p><a href="FreightlinerCascadia.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 2 -->
+            <div class="vehicle-card" data-category="truck" data-price="22,00,000" data-popularity="8"
+                data-date="2023-06-30">
+                <img src="KenworthT680.jpg" alt="Truck">
+                <h2>Kenworth T680</h2>
+                <p>Price:  ₹22,00,000</p>
+                <p><a href="KenworthT680.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 3 -->
+            <div class="vehicle-card" data-category="truck" data-price="24,00,000" data-popularity="7"
+                data-date="2023-05-20">
+                <img src="VolvoVNL760.jpg" alt="Truck">
+                <h2>Volvo VNL 760</h2>
+                <p>Price: ₹24,00,000</p>
+                <p><a href="VolvoVNL760.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 4 -->
+            <div class="vehicle-card" data-category="truck" data-price="24,00,000" data-popularity="8"
+                data-date="2023-06-15">
+                <img src="Peterbilt579.jpg" alt="Truck">
+                <h2>Peterbilt 579</h2>
+                <p>Price: ₹24,00,000</p>
+                <p><a href="Peterbilt579.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 5 -->
+            <div class="vehicle-card" data-category="truck" data-price="25,00,000" data-popularity="6"
+                data-date="2023-08-15">
+                <img src="MackAnthem.jpg" alt="Truck">
+                <h2>Mack Anthem</h2>
+                <p>Price: ₹25,00,000</p>
+                <p><a href="MackAnthem.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 6 -->
+                <div class="vehicle-card" data-category="truck" data-price="30,00,000" data-popularity="9"
+                data-date="2023-09-01">
+                <img src="InternationalLTSeries.jpg" alt="Truck">
+                <h2>International LT</h2>
+                <p>Price: ₹30,00,000</p>
+                <p><a href="InternationalLTSeries.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 7 -->
+            <div class="vehicle-card" data-category="truck" data-price="35,00,000" data-popularity="8"
+                data-date="2023-04-10">
+                <img src="WesternStar 5700XE.jpg" alt="Truck 4">
+                <h2>WesternStar</h2>
+                <p>Price: ₹35,00,000</p>
+                <p><a href="WesternStar5700XE.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 8 -->
+            <div class="vehicle-card" data-category="truck" data-price="28,00,000" data-popularity="7"
+                data-date="2023-03-05">
+                <img src="Hino 338.jpg" alt="Truck 5">
+                <h2>Hino 338</h2>
+                <p>Price: ₹28,00,000</p>
+                <p><a href="Hino338.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 9 -->
+            <div class="vehicle-card" data-category="truck" data-price="26,00,000" data-popularity="6"
+                data-date="2023-02-15">
+                <img src="Isuzu NQR.jpg" alt="Truck 6">
+                <h2>Isuzu NQR</h2>
+                <p>Price: ₹26,00,000</p>
+                <p><a href="IsuzuNQR.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 10 -->
+            <div class="vehicle-card" data-category="truck" data-price="28,00,000" data-popularity="5"
+                data-date="2023-01-20">
+                <img src="Ford F-750.jpg" alt="Truck 7">
+                <h2>Ford F-750</h2>
+                <p>Price: ₹28,00,000</p>
+                <p><a href="FordF-750.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 11 -->
+            <div class="vehicle-card" data-category="truck" data-price="32,00,000" data-popularity="9"
+                data-date="2022-12-12">
+                <img src="Mercedes-Benz Actros.jpg" alt="Truck 8">
+                <h2>Benz Actros</h2>
+                <p>Price: ₹32,00,000</p>
+                <p><a href="Mercedes-BenzActros.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 12 -->
+            <div class="vehicle-card" data-category="truck" data-price="34,00,000" data-popularity="8"
+                data-date="2022-11-25">
+                <img src="Scania R500.jpg" alt="Truck 9">
+                <h2>Scania R500</h2>
+                <p>Price: ₹34,00,000</p>
+                <p><a href="ScaniaR500.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 13 -->
+            <div class="vehicle-card" data-category="truck" data-price="36,00,000" data-popularity="7"
+                data-date="2022-10-15">
+                <img src="MAN TGX.jpg" alt="Truck 10">
+                <h2>MAN TGX</h2>
+                <p>Price: ₹36,00,000</p>
+                <p><a href="MANTGX.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 14 -->
+            <div class="vehicle-card" data-category="truck" data-price="38,00,000" data-popularity="6"
+                data-date="2022-09-10">
+                <img src="DAF XF.jpg" alt="Truck 11">
+                <h2>DAF XF</h2>
+                <p>Price: ₹38,00,000</p>
+                <p><a href="DAFXF.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 15 -->
+            <div class="vehicle-card" data-category="truck" data-price="36,00,000" data-popularity="5"
+                data-date="2022-08-01">
+                <img src="Iveco Stralis.jpg" alt="Truck 12">
+                <h2>Iveco Stralis</h2>
+                <p>Price: ₹36,00,000</p>
+                <p><a href="IvecoStralis.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 16 -->
+            <div class="vehicle-card" data-category="truck" data-price="40,00,000" data-popularity="4"
+                data-date="2022-07-20">
+                <img src="Volvo FH16.jpg" alt="Truck 13">
+                <h2>Volvo FH16</h2>
+                <p>Price: ₹40,00,000</p>
+                <p><a href="VolvoFH16.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 17 -->
+            <div class="vehicle-card" data-category="truck" data-price="35,00,000" data-popularity="3"
+                data-date="2022-06-15">
+                <img src="Renault T Range.jpg" alt="Truck 14">
+                <h2>T Range</h2>
+                <p>Price: ₹35,00,000</p>
+                <p><a href="RenaultTRange.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 18 -->
+            <div class="vehicle-card" data-category="truck" data-price="32,00,000" data-popularity="9"
+                data-date="2022-05-10">
+                <img src="Tata LPT 3718.jpg" alt="Truck 15">
+                <h2>Tata LPT 3718</h2>
+                <p>Price: ₹32,00,000</p>
+                <p><a href="TataLPT3718.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 19 -->
+            <div class="vehicle-card" data-category="truck" data-price="28,00,000" data-popularity="8"
+                data-date="2022-04-01">
+                <img src="Ashok Leyland Ecomet 1214.jpg" alt="Truck 16">
+                <h2>AshokLey land</h2>
+                <p>Price: ₹28,00,000</p>
+                <p><a href="AshokLeylandEcomet1214.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 20 -->
+            <div class="vehicle-card" data-category="truck" data-price="32,00,000" data-popularity="7"
+                data-date="2022-03-15">
+                <img src="Hino 500 Series.jpg" alt="Truck 17">
+                <h2>Hino 500 Series</h2>
+                <p>Price: ₹32,00,000</p>
+                <p><a href="Hino500Series.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 21 -->
+            <div class="vehicle-card" data-category="truck" data-price="28,00,000" data-popularity="6"
+                data-date="2022-02-10">
+                <img src="Isuzu F-Series.jpg" alt="Truck 18">
+                <h2>Isuzu F-Series</h2>
+                <p>Price: ₹28,00,000</p>
+                <p><a href="IsuzuF-Series.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 22 -->
+            <div class="vehicle-card" data-category="truck" data-price="35,00,000" data-popularity="5"
+                data-date="2022-01-05">
+                <img src="Mercedes-Benz Arocs.jpg" alt="Truck 19">
+                <h2>Benz Arocs</h2>
+                <p>Price: ₹35,00,000</p>
+                <p><a href="Mercedes-BenzArocs.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 23 -->
+            <div class="vehicle-card" data-category="truck" data-price="40,00,000" data-popularity="4"
+                data-date="2021-12-01">
+                <img src="UD Quon.jpg" alt="Truck 20">
+                <h2>UD Quon</h2>
+                <p>Price: ₹40,00,000</p>
+                <p><a href="UDQuon.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 24 -->
+            <div class="vehicle-card" data-category="truck" data-price="45,00,000" data-popularity="3"
+                data-date="2021-11-15">
+                <img src="Fuso Super Great.jpg" alt="Truck 21">
+                <h2>Fuso Super</h2>
+                <p>Price: ₹45,00,000</p>
+                <p><a href="FusoSuperGreat.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 25 -->
+            <div class="vehicle-card" data-category="truck" data-price="50,00,000" data-popularity="2"
+                data-date="2021-10-10">
+                <img src="Sinotruk Howo.jpg" alt="Truck 22">
+                <h2>Sinotruk Howo</h2>
+                <p>Price: ₹50,00,000</p>
+                <p><a href="SinotrukHowo.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 26 -->
+            <div class="vehicle-card" data-category="truck" data-price="45,00,000" data-popularity="1"
+                data-date="2021-09-01">
+                <img src="Dongfeng KX.jpg" alt="Truck 23">
+                <h2>Dongfeng KX</h2>
+                <p>Price: ₹45,00,000</p>
+                <p><a href="DongfengKX.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 27 -->
+            <div class="vehicle-card" data-category="truck" data-price="40,00,000" data-popularity="2"
+                data-date="2021-08-15">
+                <img src="FAW J6P.jpg" alt="Truck 24">
+                <h2>FAW J6P</h2>
+                <p>Price: ₹40,00,000</p>
+                <p><a href="FAWJ6P.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 28 -->
+            <div class="vehicle-card" data-category="truck" data-price="55,00,000" data-popularity="3"
+                data-date="2021-07-05">
+                <img src="Hyundai Xcient.jpg" alt="Truck 25">
+                <h2>Hyundai Xcient</h2>
+                <p>Price: ₹55,00,000</p>
+                <p><a href="HyundaiXcient.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 29 -->
+            <div class="vehicle-card" data-category="truck" data-price="45,00,000" data-popularity="4"
+                data-date="2021-06-10">
+                <img src="Shacman X3000.jpg" alt="Truck 26">
+                <h2>Shacman</h2>
+                <p>Price: ₹45,00,000</p>
+                <p><a href="ShacmanX3000.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 30 -->
+            <div class="vehicle-card" data-category="truck" data-price="45,00,000" data-popularity="5"
+                data-date="2021-05-01">
+                <img src="DAF CF.jpg" alt="Truck 27">
+                <h2>DAF CF</h2>
+                <p>Price: ₹45,00,000</p>
+                <p><a href="DAFCF.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 31 -->
+            <div class="vehicle-card" data-category="truck" data-price="35,00,000" data-popularity="6"
+                data-date="2021-04-15">
+                <img src="Ford Transit.jpg" alt="Truck 28">
+                <h2>Ford Transit</h2>
+                <p>Price: ₹35,00,000</p>
+                <p><a href="FordTransit.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 32 -->
+            <div class="vehicle-card" data-category="truck" data-price="28,00,000" data-popularity="7"
+                data-date="2021-03-10">
+                <img src="Ram ProMaster.jpg" alt="Truck 29">
+                <h2>Ram ProMaster</h2>
+                <p>Price: ₹28,00,000</p>
+                <p><a href="RamProMaster.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 33 -->
+            <div class="vehicle-card" data-category="truck" data-price="40,00,000" data-popularity="8"
+                data-date="2021-02-05">
+                <img src="GMC Savana.jpg" alt="Truck 30">
+                <h2>GMC Savana</h2>
+                <p>Price: ₹40,00,000</p>
+                <p><a href="GMCSavana.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 34 -->
+            <div class="vehicle-card" data-category="truck" data-price="35,00,000" data-popularity="9"
+                data-date="2021-01-01">
+                <img src="Chevrolet Express.jpg" alt="Truck 31">
+                <h2>Express</h2>
+                <p>Price: ₹35,00,000</p>
+                <p><a href="ChevroletExpress.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 35 -->
+            <div class="vehicle-card" data-category="truck" data-price="35,00,000" data-popularity="8"
+                data-date="2020-12-15">
+                <img src="Fiat Ducato.jpeg" alt="Truck 32">
+                <h2>Fiat Ducato</h2>
+                <p>Price: ₹35,00,000</p>
+                <p><a href="FiatDucato.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 36 -->
+            <div class="vehicle-card" data-category="truck" data-price="40,00,000" data-popularity="7"
+                data-date="2020-11-10">
+                <img src="Mercedes-Benz Sprinter.jpg" alt="Truck 33">
+                <h2>Benz Sprinter</h2>
+                <p>Price: ₹40,00,000</p>
+                <p><a href="Mercedes-BenzSprinter.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 37 -->
+            <div class="vehicle-card" data-category="truck" data-price="35,00,000" data-popularity="6"
+                data-date="2020-10-05">
+                <img src="Iveco Daily.jpg" alt="Truck 34">
+                <h2>Iveco Daily</h2>
+                <p>Price: ₹35,00,000</p>
+                <p><a href="IvecoDaily.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 38 -->
+            <div class="vehicle-card" data-category="truck" data-price="26,50,000" data-popularity="5"
+                data-date="2020-09-01">
+                <img src="Peugeot Boxer.jpg" alt="Truck 35">
+                <h2>Peugeot Boxer</h2>
+                <p>Price: ₹26,50,000</p>
+                <p><a href="PeugeotBoxer.html" class="btn btn-primary py-3 px-4">View More</a></p>
+
+            </div>
+
+            <!-- carrier 39 -->
+            <div class="vehicle-card" data-category="truck" data-price="28,00,000" data-popularity="4"
+                data-date="2020-08-15">
+                <img src="Renault Master.jpg" alt="Truck 36">
+                <h2>Renault Master</h2>
+                <p>Price: ₹28,00,000</p>
+                <p><a href="RenaultMaster.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+            <!-- carrier 40 -->
+            <div class="vehicle-card" data-category="truck" data-price="24,00,000" data-popularity="3"
+                data-date="2020-07-10">
+                <img src="Citroen Jumper.jpg" alt="Truck 37">
+                <h2>Citroen Jumper</h2>
+                <p>Price: ₹24,00,000</p> 
+                <p><a href="CitroenJumper.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="truck" data-price="61000" data-popularity="3"
+                data-date="2020-03-01">
+                <img src="ashokleylandboss.jpg" alt="Truck 41">
+                <h2>Boss</h2>
+                <p>Price: ₹61,00,000</p>
+                <p><a href="ashokleylandboss.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="truck" data-price="62000" data-popularity="4"
+                data-date="2020-02-01">
+                <img src="volkswagensub1.jpg" alt="Truck 42">
+                <h2>Crafter</h2>
+                <p>Price: ₹62,00,000</p>
+                <p><a href="volkswagencrafter.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="truck" data-price="63000" data-popularity="5"
+                data-date="2020-01-01">
+                <img src="nissannv400sub.jpg" alt="Truck 43">
+                <h2>Nissan NV 400</h2>
+                <p>Price: ₹63,00,000</p>
+                <p><a href="nissannv400.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="truck" data-price="64000" data-popularity="6"
+                data-date="2019-12-01">
+                <img src="OpelMovanosub.jpg" alt="Truck 44">
+                <h2>Opel movano</h2>
+                <p>Price: ₹64,00,000</p>
+                <p><a href="opelmovano.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="truck" data-price="65000" data-popularity="7"
+                data-date="2019-11-01">
+                <img src="ISUZUNseriessub.jpg" alt="Truck 45">
+                <h2>ISUZU N series</h2>
+                <p>Price: ₹65,00,000</p>
+                <p><a href="Isuzunseriessub.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="truck" data-price="66000" data-popularity="8"
+                data-date="2019-10-01">
+                <img src="fotonauman.jpg" alt="Truck 46">
+                <h2>Fotonauman</h2>
+                <p>Price: ₹66,00,000</p>
+                <p><a href="fotonauman.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="truck" data-price="67000" data-popularity="9"
+                data-date="2019-09-01">
+                <img src="dongfengkinland.jpg" alt="Truck 47">
+                <h2>Kinland</h2>
+                <p>Price: ₹67,00,000</p>
+                <p><a href="dongfengkinland.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="truck" data-price="68000" data-popularity="8"
+                data-date="2019-08-01">
+                <img src="tataultra.avif" alt="Truck 48">
+                <h2>TATA Ultra</h2>
+                <p>Price: ₹68,000</p>
+                <p><a href="tataultra.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="truck" data-price="69000" data-popularity="7"
+                data-date="2019-07-01">
+                <img src="eicherpro3015.avif" alt="Truck 49">
+                <h2>Eicher Pro</h2>
+                <p>Price: ₹69,000</p>
+                <p><a href="eicherpro3015.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+            <div class="vehicle-card" data-category="truck" data-price="70000" data-popularity="6"
+                data-date="2019-06-01">
+                <img src="mahindrablazo.avif" alt="Truck 50">
+                <h2>Mahindra Blazo</h2>
+                <p>Price: ₹70,00,000</p>
+                <p><a href="mahindrablazo.html" class="btn btn-primary py-3 px-4">View More</a></p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- footer start -->
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2"><a href="#" class="logo">Car<span>info</span></a></h2>
+                        <p>CarInfo helps users make informed decisions by providing detailed information about each car
+                            model,
+                            including images, user reviews, and expert opinions.</p>
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                            <li class="ftco-animate">
+                                <a href="https://twitter.com/yourprofile" target="_blank">
+                                    <span class="icon-twitter"></span>
+                                </a>
+                            </li>
+                            <li class="ftco-animate">
+                                <a href="https://facebook.com/yourprofile" target="_blank">
+                                    <span class="icon-facebook"></span>
+                                </a>
+                            </li>
+                            <li class="ftco-animate">
+                                <a href="https://instagram.com/yourprofile" target="_blank">
+                                    <span class="icon-instagram"></span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4 ml-md-5">
+                        <h2 class="ftco-heading-2">Information</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="category.html" class="py-2 d-block">Categories</a></li>
+                            <li><a href="comparision.html" class="py-2 d-block">Comparision</a></li>
+                            <li><a href="about.html" class="py-2 d-block">AboutUs</a></li>
+                            <li><a href="contact.html" class="py-2 d-block">Contact</a></li>
+                            <li><a href="faq.html" class="py-2 d-block">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Trending Cars</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="defender.html" class="py-2 d-block">Defender</a></li>
+                            <li><a href="virtus.html" class="py-2 d-block">Virtus</a></li>
+                            <li><a href="gclass.html" class="py-2 d-block">G-Class</a></li>
+                            <li><a href="fortuner.html" class="py-2 d-block">Fortuner</a></li>
+                            <li><a href="baleno.html" class="py-2 d-block">Baleno</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Have a Questions?</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li><span class="icon icon-map-marker"></span><span class="text">JUBILEE HILLS,
+                                        HYDERABAD, TELANGANA,
+                                        INDIA</span></li>
+                                <li><a><span class="icon icon-phone"></span><span class="text">+91 9876543210</span></a>
+                                </li>
+                                <li><a><span class="icon icon-envelope"></span><span
+                                            class="text">info@carinfo.com</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+
+                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved |</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00" />
+        </svg></div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+
+
+    <script>
+
+
+
+
+        // Search functionality
+        function filterVehicles() {
+            const searchInput = document.getElementById("searchInput").value.toLowerCase();
+            const vehicles = document.getElementsByClassName("vehicle-card");
+
+            for (let vehicle of vehicles) {
+                const title = vehicle.getElementsByTagName("h2")[0].innerText.toLowerCase();
+                vehicle.style.display = title.includes(searchInput) ? "" : "none";
+            }
+        }
+
+        // Filter by category (subcategories)
+        function filterByCategory(category) {
+            const vehicles = document.getElementsByClassName("vehicle-card");
+
+            for (let vehicle of vehicles) {
+                vehicle.style.display = (category === 'all' || vehicle.getAttribute("data-category") === category) ? "" : "none";
+            }
+        }
+
+
+        // Sorting functionality
+        function sortVehicles() {
+            const sortOption = document.getElementById("sortOptions").value;
+            const vehicleGrid = document.getElementById("vehicleGrid");
+            const vehicles = Array.from(vehicleGrid.getElementsByClassName("vehicle-card"));
+
+            vehicles.sort((a, b) => {
+                switch (sortOption) {
+                    case 'price':
+                        return parseInt(a.getAttribute("data-price")) - parseInt(b.getAttribute("data-price"));
+                    case 'popularity':
+                        return parseInt(b.getAttribute("data-popularity")) - parseInt(a.getAttribute("data-popularity"));
+                    case 'newest':
+                        return new Date(b.getAttribute("data-date")) - new Date(a.getAttribute("data-date"));
+                    default:
+                        return 0;
+                }
+            });
+
+            vehicleGrid.innerHTML = "";
+            vehicles.forEach(vehicle => vehicleGrid.appendChild(vehicle));
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
