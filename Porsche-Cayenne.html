@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CarInfo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .vehicle-details {
+            display: flex;
+            padding: 20px;
+        }
+
+        .vehicle-images {
+            width: 40%;
+        }
+
+        .vehicle-images img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .vehicle-info {
+            width: 60%;
+            padding-left: 20px;
+            color: black;
+        }
+
+        .vehicle-info h2 {
+            color: #333;
+        }
+
+        .vehicle-info ul {
+            list-style-type: disc;
+        }
+
+        .vehicle-info button {
+            background-color: #01d28e;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .vehicle-info button:hover {
+            background-color: #0056b3;
+        }
+
+        .thumbnail-images {
+            display: flex;
+            gap: 10px;
+        }
+
+        .thumbnail-images img {
+            width: 80px;
+            cursor: pointer;
+        }
+
+        .related-vehicles {
+            padding: 20px;
+        }
+
+        .related-vehicles h2 {
+            color: #333;
+        }
+
+        .related-vehicle-list {
+            display: flex;
+            gap: 20px;
+        }
+
+        .related-vehicle-card {
+            width: 30%;
+            text-align: center;
+        }
+
+        .related-vehicle-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .related-vehicle-card button {
+            background-color: #01d28e;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+
+        }
+
+        .related-vehicle-card button:hover {
+            background-color: #0056b3;
+        }
+
+        .customer-reviews1 {
+            padding: 20px;
+        }
+
+        .review1 {
+            background-color: #f0f0f0;
+            color: black;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .review1 p {
+            margin: 5px 0;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 5px;
+        }
+
+        .modal-content button {
+            background-color: #01d28e;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .modal-content button:hover {
+            background-color: #0056b3;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .comparison {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .vehicle-card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .vehicle-card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Car<span>info</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item "><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item active"><a href="category.html" class="nav-link">Categories</a></li>
+                    <li class="nav-item"><a href="comparision.html" class="nav-link">Comparision</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">AboutUs</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <!-- <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+
+
+
+    <!-- top header start -->
+
+    <div class="hero-wrap ftco-degree-bg" style="background-image: url('PorscheCayenne.jpg'); background-size: contain;"
+        data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
+                <div class="col-lg-8 ftco-animate">
+                    <div class="text w-100 text-center mb-md-5 pb-md-5">
+                        <h1 class="mb-4">Fast &amp; Easy Way To Compare A Car</h1>
+                        <span style="display: flex; margin-left: 220px;"><a href="index.html">
+                                <h1>Home /</h1>
+                            </a><a href="category.html">
+                                <h1 style="color: #01d28e;">/ Categories</h1>
+                            </a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- top header end -->
+    <br><br><br>
+    <!-- details start -->
+
+    <section class="vehicle-details">
+        <div class="vehicle-images">
+            <img id="mainImage" src="PorscheCayenne.jpg" alt="Vehicle Image" style="height: 300px; margin-top: 80px;">
+            <div class="thumbnail-images">
+                <img src="interior1.jpg" alt="Vehicle Thumbnail" onclick="changeImage(this)">
+                <img src="interior2.jpg" alt="Vehicle Thumbnail" onclick="changeImage(this)">
+                <img src="interior3.jpg" alt="Vehicle Thumbnail" onclick="changeImage(this)">
+            </div>
+        </div>
+
+        <div class="vehicle-info">
+            <h2>Porsche Cayenne</h2>
+            <p><strong>Model:</strong> Cayenne 2024</p>
+            <p><strong>Price:</strong> ₹1,20,00,000</p>
+            <p><strong>Availability:</strong> In Stock</p>
+            <p><strong>Description:</strong> The Porsche Cayenne delivers a thrilling driving experience, blending
+                sporty performance with luxury and advanced technology, making it perfect for both city and highway
+                journeys.</p>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+                <li>Engine: 2995cc, 335bhp@5300rpm, 450Nm@1340rpm</li>
+                <li>Mileage: 10.0 Kmpl</li>
+                <li>Transmission: 8-Speed Automatic</li>
+                <li>Fuel Type: Petrol</li>
+                <li>Seating Capacity: 5 Seater</li>
+            </ul> <button
+                onclick="addToComparison('Porsche Cayenne', 'PorscheCayenne.jpg', '2995cc, 335bhp@5300rpm, 450Nm@1340rpm', 12000000, '10.0 km/l')">Compare
+                Vehicle</button> <button class="clear-all-button" onclick="clearAllComparisons()">Clear All
+                Comparisons</button>
+        </div>
+    </section>
+
+    <section class="related-vehicles">
+        <h2>Related Vehicles</h2>
+        <div class="related-vehicle-list">
+            <div class="related-vehicle-card"> <img src="g-class.jpg" alt="Related Vehicle">
+                <p>Model: G-Class 2023</p>
+                <p>Price: ₹1,20,00,000</p> <button
+                    onclick="addToComparison('G-Class 2023', 'g-class.jpg', '4000cc', 12000000, '10 km/l')">Compare
+                    Vehicle</button>
+            </div>
+            <div class="related-vehicle-card"> <img src="defender.jpg" alt="Related Vehicle">
+                <p>Model: Defender 2024</p>
+                <p>Price: ₹85,00,000</p> <button
+                    onclick="addToComparison('Defender 2024', 'defender.jpg', '3000cc', 8500000, '10 km/l')">Compare
+                    Vehicle</button>
+            </div>
+            <div class="related-vehicle-card"> <img src="fortuner.jpg" alt="Related Vehicle">
+                <p>Model: Fortuner 2025</p>
+                <p>Price: ₹40,00,000</p> <button
+                    onclick="addToComparison('Fortuner 2025', 'fortuner.jpg', '2700cc', 4000000, '12 km/l')">Compare
+                    Vehicle</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="customer-reviews1">
+        <h2>Customer Reviews</h2>
+        <div class="review1">
+            <p><strong>John Doe:</strong> Excellent vehicle, very smooth ride!</p>
+            <p>Rating: <span style="color: goldenrod;">⭐⭐⭐⭐☆</span></p>
+        </div>
+        <div class="review1">
+            <p><strong>Jane Smith:</strong> Great mileage, but a bit pricey.</p>
+            <p>Rating: <span style="color: goldenrod;"> ⭐⭐⭐☆☆</span></p>
+        </div>
+        <div class="review1">
+            <p><strong>Manikanta:</strong> Great mileage, but a bit pricey.</p>
+            <p>Rating: <span style="color: goldenrod;"> ⭐⭐⭐☆☆</span></p>
+        </div>
+    </section>
+
+    <!-- Button to clear comparisons outside modal -->
+
+    <!-- Modal -->
+    <div id="comparisonModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h1>Vehicle Comparison</h1>
+            <div class="comparison" id="comparisonContainer"></div>
+            <button class="clear-button" onclick="clearComparisons()">Clear Comparisons</button>
+        </div>
+    </div>
+
+    <!-- details end -->
+
+
+
+
+
+
+    <!-- footer start -->
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2"><a href="#" class="logo">Car<span>info</span></a></h2>
+                        <p>CarInfo helps users make informed decisions by providing detailed information about each car
+                            model,
+                            including images, user reviews, and expert opinions.</p>
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                            <li class="ftco-animate">
+                                <a href="https://twitter.com/yourprofile" target="_blank">
+                                    <span class="icon-twitter"></span>
+                                </a>
+                            </li>
+                            <li class="ftco-animate">
+                                <a href="https://facebook.com/yourprofile" target="_blank">
+                                    <span class="icon-facebook"></span>
+                                </a>
+                            </li>
+                            <li class="ftco-animate">
+                                <a href="https://instagram.com/yourprofile" target="_blank">
+                                    <span class="icon-instagram"></span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4 ml-md-5">
+                        <h2 class="ftco-heading-2">Information</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="category.html" class="py-2 d-block">Categories</a></li>
+                            <li><a href="comparision.html" class="py-2 d-block">Comparision</a></li>
+                            <li><a href="about.html" class="py-2 d-block">AboutUs</a></li>
+                            <li><a href="contact.html" class="py-2 d-block">Contact</a></li>
+                            <li><a href="faq.html" class="py-2 d-block">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Trending Cars</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="defender.html" class="py-2 d-block">Defender</a></li>
+                            <li><a href="virtus.html" class="py-2 d-block">Virtus</a></li>
+                            <li><a href="gclass.html" class="py-2 d-block">G-Class</a></li>
+                            <li><a href="fortuner.html" class="py-2 d-block">Fortuner</a></li>
+                            <li><a href="baleno.html" class="py-2 d-block">Baleno</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Have a Questions?</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li><span class="icon icon-map-marker"></span><span class="text">JUBILEE HILLS,
+                                        HYDERABAD, TELANGANA,
+                                        INDIA</span></li>
+                                <li><a><span class="icon icon-phone"></span><span class="text">+91 9876543210</span></a>
+                                </li>
+                                <li><a><span class="icon icon-envelope"></span><span
+                                            class="text">info@carinfo.com</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+
+                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved |</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- footer end -->
+
+
+
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00" />
+        </svg></div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        function addToComparison(model, image, engine, price, mileage) {
+            let comparisons = JSON.parse(localStorage.getItem('vehicleComparisons')) || [];
+
+            if (comparisons.length < 2) {
+                comparisons.push({ model, image, engine, price, mileage });
+                localStorage.setItem('vehicleComparisons', JSON.stringify(comparisons));
+
+                if (comparisons.length === 2) {
+                    showComparisonModal();
+                } else {
+                    alert('Vehicle added for comparison. You can add one more vehicle.');
+                }
+            } else {
+                alert('You can only compare two vehicles at a time. Please clear the comparisons first.');
+            }
+        }
+
+        function showComparisonModal() {
+            const modal = document.getElementById("comparisonModal");
+            const container = document.getElementById('comparisonContainer');
+            const comparisons = JSON.parse(localStorage.getItem('vehicleComparisons')) || [];
+
+            container.innerHTML = ''; // Clear previous content
+
+            comparisons.forEach(vehicle => {
+                const card = document.createElement('div');
+                card.className = 'vehicle-card';
+                card.innerHTML = `
+                <img src="${vehicle.image}" alt="${vehicle.model}">
+                <h2>${vehicle.model}</h2>
+                <p>Engine: ${vehicle.engine}</p>
+                <p>Price: ₹${vehicle.price}</p>
+                <p>Mileage: ${vehicle.mileage}</p>
+            `;
+                container.appendChild(card);
+            });
+
+            modal.style.display = "block";
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("comparisonModal");
+            modal.style.display = "none"; // Close modal
+        }
+
+        window.onclick = function (event) {
+            const modal = document.getElementById("comparisonModal");
+            if (event.target == modal) {
+                closeModal();
+            }
+        };
+
+        function clearComparisons() {
+            localStorage.removeItem('vehicleComparisons');
+            alert('Comparisons cleared! You can now add new vehicles for comparison.');
+            closeModal(); // Close the modal after clearing comparisons
+        }
+
+        function clearAllComparisons() {
+            localStorage.removeItem('vehicleComparisons');
+            alert('All comparisons cleared!');
+        }
+    </script>
+    <script>
+        function changeImage(thumbnail) {
+            const mainImage = document.getElementById("mainImage");
+            mainImage.src = thumbnail.src;
+        }
+
+        // Add vehicle to comparison list
+        document.getElementById("compareButton").addEventListener("click", function () {
+            alert("Vehicle added to comparison list!");
+        });
+    </script>
+
+</body>
+
+</html>

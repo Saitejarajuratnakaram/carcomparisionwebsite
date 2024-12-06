@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Comparison Website</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+   <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Navigation Bar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 20px;
+}
+
+.logo h2 {
+  color: #fff;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-bar input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+}
+
+/* Section Styling */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+section h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+section p {
+  font-size: 18px;
+  color: #666;
+}
+
+   </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <h2>YourCarCompare</h2>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#categories">Vehicle Categories</a></li>
+        <li><a href="#comparison">Comparison Tools</a></li>
+        <li><a href="#support">Customer Support</a></li>
+      </ul>
+      <div class="search-bar">
+        <input type="text" placeholder="Search cars...">
+        <button type="submit">Search</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Content Sections -->
+  <section id="categories">
+    <h1>Vehicle Categories</h1>
+    <p>Explore cars by category such as SUVs, Sedans, Trucks, and more.</p>
+  </section>
+
+  <section id="comparison">
+    <h1>Comparison Tools</h1>
+    <p>Use our advanced tools to compare different car models side-by-side.</p>
+  </section>
+
+  <section id="support">
+    <h1>Customer Support</h1>
+    <p>Need help? Our support team is here to assist you with any questions.</p>
+  </section>
+
+</body>
+</html>
