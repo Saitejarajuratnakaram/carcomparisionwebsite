@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CarInfo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/ionicons.min.css">
+
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      /* font-family: Arial, sans-serif; */
+      margin: 0;
+      padding: 0;
+      /* background-image: url(images/car-faqBg.jpg); */
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .faq-h1 h1 {
+      margin-top: 100px;
+      text-align: center;
+      /* font-size: 50px; */
+      font-weight: 600;
+      transition: ease-in;
+    }
+
+    .faq-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 35px auto;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .faq {
+      background: #ffffff3b;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+      margin: 10px;
+      width: calc(45% - 20px);
+      /* 45% width with margin space */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+      /* Ensure the content does not overflow */
+      transition: box-shadow 0.3s ease;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      /* Space between question and toggle */
+      align-items: center;
+      font-size: 18px;
+      color: #333;
+      font-weight: bold;
+      margin: 0;
+      background: linear-gradient(to bottom, #ffffff38, #f7f7f7);
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      cursor: pointer;
+      /* Cursor indicates clickable area */
+    }
+
+    .toggle-icon {
+      font-size: 20px;
+      color: #333;
+      cursor: pointer;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      /* Initially hidden */
+      opacity: 0;
+      /* Initially invisible */
+      transform: translateY(-20px);
+      /* Initially moved up */
+      overflow: hidden;
+      /* Ensure the content does not overflow */
+      transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+      /* Smooth transition */
+      padding: 0 10px;
+      /* Add padding for consistency */
+    }
+
+    .faq-answer.show {
+      max-height: 200px;
+      /* Adjust height to fit content */
+      opacity: 1;
+      /* Fully visible */
+      transform: translateY(0);
+      /* Move back to original position */
+    }
+
+    .faq-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .faq-description {
+      font-size: 14px;
+      color: Black;
+
+    }
+
+    @media (max-width: 768px) {
+      .faq {
+        width: calc(100% - 20px);
+        /* Full width on smaller screens */
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Car<span>info</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="category.html" class="nav-link">Categories</a></li>
+          <li class="nav-item"><a href="comparision.html" class="nav-link">Comparision</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">AboutUs</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item active"><a href="faq.html" class="nav-link">FAQ</a></li>
+          <!-- <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END nav -->
+
+
+
+  <!-- top header start -->
+
+  <div class="hero-wrap ftco-degree-bg" style="background-image: url('car-faqBg.jpg');"
+    data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
+        <div class="col-lg-8 ftco-animate">
+          <div class="text w-100 text-center mb-md-5 pb-md-5">
+            <h1 class="mb-4">Fast &amp; Easy Way To Compare A Car</h1>
+            <span style="display: flex; margin-left: 220px;"><a href="index.html">
+                <h1>Home /</h1>
+              </a><a href="faq.html">
+                <h1 style="color: #01d28e;">/ FAQ's</h1>
+              </a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- top header end -->
+
+  <div class="faq-h1" data-aos="fade-up">
+    <h1>FAQ'S</h1>
+  </div>
+  <div class="faq-container">
+
+
+    <!-- FAQs with toggle icons and AOS animations -->
+    <div class="faq" data-aos="fade-left">
+      <div class="faq-question" data-aos="fade-up">
+        <h3 data-aos="zoom-in" class="faq-title">What is the best car for fuel efficiency?</h3>
+        <span class="toggle-icon" data-toggle="plus">+</span>
+      </div>
+      <div class="faq-answer" data-aos="fade-up">
+        <p data-aos="zoom-in" class="faq-description">Cars like the Toyota Prius and Honda Insight are known for
+          their excellent fuel efficiency.</p>
+      </div>
+    </div>
+    <div class="faq" data-aos="fade-right">
+      <div class="faq-question" data-aos="fade-up">
+        <h3 data-aos="zoom-in" class="faq-title">Which car has the best safety features?</h3>
+        <span class="toggle-icon" data-toggle="plus">+</span>
+      </div>
+      <div class="faq-answer" data-aos="fade-up">
+        <p data-aos="zoom-in" class="faq-description">Volvo cars are well-known for their advanced safety
+          features.</p>
+      </div>
+    </div>
+    <div class="faq" data-aos="fade-left">
+      <div class="faq-question" data-aos="fade-up">
+        <h3 data-aos="zoom-in" class="faq-title">Which car is the best for off-roading?</h3>
+        <span class="toggle-icon" data-toggle="plus">+</span>
+      </div>
+      <div class="faq-answer" data-aos="fade-up">
+        <p data-aos="zoom-in" class="faq-description">Jeep Wrangler and Land Rover Defender are popular choices
+          for off-roading.</p>
+      </div>
+    </div>
+    <div class="faq" data-aos="fade-right">
+      <div class="faq-question" data-aos="fade-up">
+        <h3 data-aos="zoom-in" class="faq-title">What is the best electric car available?</h3>
+        <span class="toggle-icon" data-toggle="plus">+</span>
+      </div>
+      <div class="faq-answer" data-aos="fade-up">
+        <p data-aos="zoom-in" class="faq-description">Tesla Model 3 and Model S are considered some of the best
+          electric cars on the market.</p>
+      </div>
+    </div>
+    <div class="faq" data-aos="fade-left">
+      <div class="faq-question" data-aos="fade-up">
+        <h3 data-aos="zoom-in" class="faq-title">What is the most reliable car brand?</h3>
+        <span class="toggle-icon" data-toggle="plus">+</span>
+      </div>
+      <div class="faq-answer" data-aos="fade-up">
+        <p data-aos="zoom-in" class="faq-description">Toyota and Honda are consistently rated as some of the
+          most reliable car brands.</p>
+      </div>
+    </div>
+
+    <!-- Next 9 FAQs -->
+    <div class="faq" data-aos="fade-right">
+      <div class="faq-question" data-aos="fade-up">
+        <h3 data-aos="zoom-in" class="faq-title">Which car has the most advanced technology features?</h3>
+        <span class="toggle-icon" data-toggle="plus">+</span>
+      </div>
+      <div class="faq-answer" data-aos="fade-up">
+        <p data-aos="zoom-in" class="faq-description">Tesla and Audi offer cars with some of the most advanced
+          technology features.</p>
+      </div>
+    </div>
+    <div class="faq" data-aos="fade-left">
+      <div class="faq-question" data-aos="fade-up">
+        <h3 data-aos="zoom-in" class="faq-title">What is the best luxury car?</h3>
+        <span class="toggle-icon" data-toggle="plus">+</span>
+      </div>
+      <div class="faq-answer" data-aos="fade-up">
+        <p data-aos="zoom-in" class="faq-description">Mercedes-Benz S-Class and BMW 7 Series are top choices for
+          luxury cars.</p>
+      </div>
+    </div>
+    <div class="faq" data-aos="fade-right">
+      <div class="faq-question" data-aos="fade-up">
+        <h3 data-aos="zoom-in" class="faq-title">Which car is best for families?</h3>
+        <span class="toggle-icon" data-toggle="plus">+</span>
+      </div>
+      <div class="faq-answer" data-aos="fade-up">
+        <p data-aos="zoom-in" class="faq-description">Honda Odyssey and Toyota Sienna are great family cars with
+          simple space and features.</p>
+      </div>
+    </div>
+
+
+
+    <div class="faq" data-aos="fade-left">
+      <div class="faq-question" data-aos="fade-up">
+        <h3 data-aos="zoom-in" class="faq-title">What is the best car for speed?</h3>
+        <span class="toggle-icon" data-toggle="plus">+</span>
+      </div>
+      <div class="faq-answer" data-aos="fade-up">
+        <p data-aos="zoom-in" class="faq-description">Cars like the Bugatti Chiron and Lamborghini Aventador
+          are known for their speed.</p>
+      </div>
+    </div>
+    <div class="faq" data-aos="fade-right">
+      <div class="faq-question" data-aos="fade-up">
+        <h3 data-aos="zoom-in" class="faq-title">Which car is the best value for money?</h3>
+        <span class="toggle-icon" data-toggle="plus">+</span>
+      </div>
+      <div class="faq-answer" data-aos="fade-up">
+        <p data-aos="zoom-in" class="faq-description">The Honda Civic and Toyota Corolla are known for
+          theiraffordability and value.</p>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+
+  <!-- footer start -->
+  <footer class="ftco-footer ftco-bg-dark ftco-section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2"><a href="#" class="logo">Car<span>info</span></a></h2>
+            <p>CarInfo helps users make informed decisions by providing detailed information about each car model,
+              including images, user reviews, and expert opinions.</p>
+            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+              <li class="ftco-animate">
+                <a href="https://twitter.com/yourprofile" target="_blank">
+                  <span class="icon-twitter"></span>
+                </a>
+              </li>
+              <li class="ftco-animate">
+                <a href="https://facebook.com/yourprofile" target="_blank">
+                  <span class="icon-facebook"></span>
+                </a>
+              </li>
+              <li class="ftco-animate">
+                <a href="https://instagram.com/yourprofile" target="_blank">
+                  <span class="icon-instagram"></span>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4 ml-md-5">
+            <h2 class="ftco-heading-2">Information</h2>
+            <ul class="list-unstyled">
+              <li><a href="category.html" class="py-2 d-block">Categories</a></li>
+              <li><a href="comparision.html" class="py-2 d-block">Comparision</a></li>
+              <li><a href="about.html" class="py-2 d-block">AboutUs</a></li>
+              <li><a href="contact.html" class="py-2 d-block">Contact</a></li>
+              <li><a href="faq.html" class="py-2 d-block">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Trending Cars</h2>
+            <ul class="list-unstyled">
+              <li><a href="defender.html" class="py-2 d-block">Defender</a></li>
+              <li><a href="virtus.html" class="py-2 d-block">Virtus</a></li>
+              <li><a href="gclass.html" class="py-2 d-block">G-Class</a></li>
+              <li><a href="fortuner.html" class="py-2 d-block">Fortuner</a></li>
+              <li><a href="baleno.html" class="py-2 d-block">Baleno</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Have a Questions?</h2>
+            <div class="block-23 mb-3">
+              <ul>
+                <li><span class="icon icon-map-marker"></span><span class="text">JUBILEE HILLS, HYDERABAD, TELANGANA,
+                    INDIA</span></li>
+                <li><a><span class="icon icon-phone"></span><span class="text">+91 9876543210</span></a></li>
+                <li><a><span class="icon icon-envelope"></span><span class="text">info@carinfo.com</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+
+          <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> All rights reserved |</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- footer end -->
+
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+
+    // Toggle FAQ answers
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const isOpen = answer.classList.contains('show');
+
+        // Close all open answers
+        document.querySelectorAll('.faq-answer').forEach(a => {
+          a.classList.remove('show');
+          a.previousElementSibling.querySelector('.toggle-icon').textContent = '+';
+        });
+
+        // Toggle the clicked answer
+        if (!isOpen) {
+          answer.classList.add('show');
+          question.querySelector('.toggle-icon').textContent = '−';
+        } else {
+          answer.classList.remove('show');
+          question.querySelector('.toggle-icon').textContent = '+';
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
